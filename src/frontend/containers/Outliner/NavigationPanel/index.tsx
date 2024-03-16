@@ -53,7 +53,7 @@ const TagsPanel = observer((props: Partial<MultiSplitPaneProps>) => {
           text="Grid"
         />
       </div>
-      <div className="navigation-buttons-raw">
+      {/* <div className="navigation-buttons-raw">
         <NavigationButton
           icon={IconSet.FACE_SMILING}
           onClick={uiStore.setMethodFaces}
@@ -72,7 +72,7 @@ const TagsPanel = observer((props: Partial<MultiSplitPaneProps>) => {
           checked={uiStore.isCalendar}
           text="Calendar"
         />
-      </div>
+      </div> */}
     </div>
   );
 });
