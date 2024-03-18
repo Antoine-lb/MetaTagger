@@ -164,7 +164,7 @@ export class RendererMessenger {
 
   static getDefaultThumbnailDirectory = async () => {
     const userDataPath = await RendererMessenger.getPath('temp');
-    return path.join(userDataPath, 'OneFolder', 'thumbnails');
+    return path.join(userDataPath, 'MetaTagger', 'thumbnails');
   };
 
   static getDefaultBackupDirectory = async () => {

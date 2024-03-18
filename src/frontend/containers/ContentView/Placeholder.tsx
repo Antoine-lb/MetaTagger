@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react-lite';
-import LOGO_FC from 'resources/logo/svg/full-color/onefolder-logomark-fc.svg';
+// import LOGO_FC from 'resources/logo/svg/full-color/onefolder-logomark-fc.svg';
 import { IS_PREVIEW_WINDOW } from 'common/window';
 
 import { useStore } from '../../contexts/StoreContext';
@@ -49,11 +49,7 @@ const PreviewWindowPlaceholder = observer(() => {
   }, [fileStore.fileListLastModified]);
 
   if (true) {
-    return (
-      <ContentPlaceholder title="Loading..." icon={<SVG src={LOGO_FC} />}>
-        {IconSet.LOADING}
-      </ContentPlaceholder>
-    );
+    return <ContentPlaceholder title="Loading...">{IconSet.LOADING}</ContentPlaceholder>;
   }
 });
 
@@ -97,7 +93,7 @@ const Welcome = () => {
               shell.openExternal('https://onefolder.app/getting-started');
             }}
           >
-            {/* <img src="/play.svg" alt="OneFolder logo" class="mr-1 fill-[#333]" /> */}
+            {/* <img src="/play.svg" alt="MetaTagger logo" class="mr-1 fill-[#333]" /> */}
             {IconSet.PLAY} introduction video
           </button>
         </div>

@@ -156,7 +156,7 @@ const LocationCreationDialog = observer(({ location, onClose }: LocationCreation
       onCancel={handleCancel}
     >
       <p id="location-add-info">
-        Once you click &quot;Confirm&quot;, OneFolder will generate thumnails, this may take a few
+        Once you click &quot;Confirm&quot;, MetaTagger will generate thumnails, this may take a few
         minutes to complete.
       </p>
       <form method="dialog" onSubmit={(e) => e.preventDefault()}>

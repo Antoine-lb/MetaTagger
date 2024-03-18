@@ -25,14 +25,14 @@ const About = observer(() => {
           It&apos;s completely <b>free and open source</b>! Find out more at
         </p>
         <span>
-          <ExternalLink url="https://onefolder.app/">onefolder.app</ExternalLink>.
+          <ExternalLink url="https://metatagger.lebaux.co/">metatagger.lebaux.co/</ExternalLink>.
         </span>
         <ul>
           <li>General information</li>
           <li>Download the latest version</li>
         </ul>
-        <ExternalLink url="https://github.com/OneFolderApp/OneFolder">
-          github.com/OneFolderApp/OneFolder
+        <ExternalLink url="https://github.com/Antoine-lb/MetaTagger">
+          github.com/Antoine-lb/MetaTagger
         </ExternalLink>
         <ul>
           <li>🤓 View the source code</li>

@@ -1,6 +1,6 @@
 {
-  "name": "onefolder",
-  "productName": "OneFolder",
+  "name": "metatagger",
+  "productName": "MetaTagger",
   "version": "1.0.0",
   "description": "A tool for managing your visual library",
   "main": "build/main.bundle.js",
@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*{ts,tsx} widgets/**/*{ts,tsx} --fix",
     "test": "jest",
     "package": "yarn build && electron-builder",
-    "logo": "ncp ./resources/logo/icns/onefolder-logomark-fc.icns ./build/icon.icns && ncp ./resources/logo/ico/onefolder-logomark-fc-256x256.ico ./build/icon.ico",
+    "logo": "ncp ./resources/logo/icns/metatagger-logomark-fc.icns ./build/icon.icns && ncp ./resources/logo/ico/onefolder-logomark-fc-256x256.ico ./build/icon.ico",
     "build": "rimraf dist && yarn production && yarn logo",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
@@ -75,14 +75,14 @@
     ],
     "asar": true
   },
-  "repository": "https://github.com/OneFolderApp/OneFolder",
+  "repository": "https://github.com/Antoine-lb/MetaTagger",
   "publish": {
     "provider": "github",
-    "owner": "OneFolderApp",
-    "repo": "OneFolder",
+    "owner": "Antoine-lb",
+    "repo": "MetaTagger",
     "releaseType": "release"
   },
-  "author": "OneFolder",
+  "author": "Antoine-lb",
   "license": "MIT",
   "devDependencies": {
     "@electron/notarize": "^2.2.0",

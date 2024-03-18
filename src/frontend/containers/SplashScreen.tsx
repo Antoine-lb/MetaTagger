@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PreloadIcon from 'resources/logo/svg/full-color/onefolderTemplate-fc-@2x.svg';
+// import PreloadIcon from 'resources/logo/svg/onefolderTemplate-fc-@2x.svg';
 import { SVG } from 'widgets/icons';
 
 const SplashScreen = () => {
@@ -32,13 +32,13 @@ const SplashScreen = () => {
   return (
     <div style={splashScreenContainerStyles} id="splash-screen">
       <div style={splashScreenStyles}>
-        <SVG
+        {/* <SVG
           src={PreloadIcon}
           // style={{ fill: 'url(#yellow-blue)', width: '48px', height: '36px' }}
           style={{ height: '180px' }}
-        />
+        /> */}
 
-        {/* <p style={textStyles}>OneFolder</p> */}
+        {/* <p style={textStyles}>MetaTagger</p> */}
       </div>
     </div>
   );

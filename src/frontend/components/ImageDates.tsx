@@ -16,7 +16,7 @@ type CommonMetadata = {
 
 const commonMetadataLabels: Record<keyof CommonMetadata, string> = {
   imported: 'Imported',
-  // TODO: modified in OneFolder vs modified in system?
+  // TODO: modified in MetaTagger vs modified in system?
   created: 'Created',
   modified: 'Modified',
 };

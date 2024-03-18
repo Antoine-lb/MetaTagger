@@ -28,7 +28,7 @@ import BackupScheduler from './backend/backup-scheduler';
 import { DB_NAME, dbInit } from './backend/config';
 
 async function main(): Promise<void> {
-  console.groupCollapsed('Initializing OneFolder');
+  console.groupCollapsed('Initializing MetaTagger');
   // Render our react components in the div with id 'app' in the html file
   const container = document.getElementById('app');
 
@@ -197,9 +197,9 @@ async function runPreviewApp(db: Dexie, root: Root): Promise<void> {
 }
 
 main()
-  .then(() => console.info('Successfully initialized OneFolder!'))
+  .then(() => console.info('Successfully initialized MetaTagger!'))
   .catch((err) => {
-    console.error('Could not initialize OneFolder!', err);
+    console.error('Could not initialize MetaTagger!', err);
     window.alert('An error has occurred, check the console for more details');
 
     // In dev mode, the console is already automatically opened: only open in non-dev mode here

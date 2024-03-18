@@ -118,7 +118,7 @@ export const ImportExport = observer(() => {
           >
             <p>
               This will overwrite any existing tags (a.k.a. keywords) in those files with
-              OneFolder&#39;s tags. It is recommended to import all tags before writing new tags.
+              MetaTagger&#39;s tags. It is recommended to import all tags before writing new tags.
             </p>
           </Alert>
         </ButtonGroup>
@@ -156,7 +156,7 @@ export const ImportExport = observer(() => {
           onClick={async (button) => {
             if (isConfirmingFileImport && button === DialogButton.PrimaryButton) {
               AppToaster.show({
-                message: 'Restoring database... OneFolder will restart',
+                message: 'Restoring database... MetaTagger will restart',
                 timeout: 5000,
               });
               try {

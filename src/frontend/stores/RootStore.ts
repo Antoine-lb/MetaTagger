@@ -63,11 +63,11 @@ class RootStore {
       if (uiStore.isSlideMode && fileStore.fileList.length > 0) {
         const activeFile = fileStore.fileList[uiStore.firstItem];
         if (activeFile) {
-          return `${activeFile.filename}.${activeFile.extension} - OneFolder`;
+          return `${activeFile.filename}.${activeFile.extension} - MetaTagger`;
         }
-        return 'OneFolder';
+        return 'MetaTagger';
       } else {
-        return 'OneFolder';
+        return 'MetaTagger';
       }
     });
 
@@ -125,7 +125,7 @@ class RootStore {
 
   static async preview(backend: DataStorage, backup: DataBackup): Promise<RootStore> {
     const rootStore = new RootStore(backend, backup, (fileStore, uiStore) => {
-      const PREVIEW_WINDOW_BASENAME = 'OneFolder Quick View';
+      const PREVIEW_WINDOW_BASENAME = 'MetaTagger Quick View';
       const index = uiStore.firstItem;
       if (index >= 0 && index < fileStore.fileList.length) {
         const file = fileStore.fileList[index];

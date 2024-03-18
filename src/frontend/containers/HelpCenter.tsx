@@ -190,16 +190,16 @@ interface IPageData {
 
 const PAGE_DATA: () => IPageData[] = () => [
   {
-    title: 'About OneFolder',
+    title: 'About MetaTagger',
     icon: IconSet.LOGO,
     sections: [
       {
-        title: 'What is OneFolder',
+        title: 'What is MetaTagger',
         content: (
           <>
             <p>
               <strong>
-                OneFolder is a tool designed to help artists organize their visual library. It is
+                MetaTagger is a tool designed to help artists organize their visual library. It is
                 very common for creative people to use reference images throughout their projects.
               </strong>
             </p>
@@ -210,8 +210,8 @@ const PAGE_DATA: () => IPageData[] = () => [
               access, that matters. If only a handful of images were relevant to us, it would be
               easy to keep them in mind, but many artists are interested in creating their own
               curated library, and in such, it becomes increasingly difficult to remember where
-              images were. Again, OneFolder was created to help artists organize their visual
-              library. To learn more about how OneFolder works, please read on.
+              images were. Again, MetaTagger was created to help artists organize their visual
+              library. To learn more about how MetaTagger works, please read on.
             </p>
           </>
         ),
@@ -227,10 +227,10 @@ const PAGE_DATA: () => IPageData[] = () => [
         content: (
           <>
             <p>
-              Library setup refers to the process of getting your images into OneFolder, so that
+              Library setup refers to the process of getting your images into MetaTagger, so that
               they are available to be managed and viewed. Rather than manually importing images
-              from your filesystem, OneFolder focuses on linked folders, which we refer to as{' '}
-              <b>Locations</b>. Read on to find out about how to add images to your OneFolder
+              from your filesystem, MetaTagger focuses on linked folders, which we refer to as{' '}
+              <b>Locations</b>. Read on to find out about how to add images to your MetaTagger
               library.
             </p>
           </>
@@ -241,7 +241,7 @@ const PAGE_DATA: () => IPageData[] = () => [
         content: (
           <>
             <p>
-              In OneFolder, the primary way of adding images to your library is the use of
+              In MetaTagger, the primary way of adding images to your library is the use of
               "Locations". A location in this context is a link to a folder on your computer. This
               means that all images in that folder as well as any subfolders will be automatically
               loaded once it is added to your list of locations.
@@ -249,18 +249,18 @@ const PAGE_DATA: () => IPageData[] = () => [
               The benefit of this system is that you can have full control over where your data is
               stored, while not having to tediously import images manually from various places. To
               add more images, simply place them into the linked folder, and they will automatically
-              show up in OneFolder.
+              show up in MetaTagger.
               <br />
               However, removing images from a linked folder will not automatically remove them from
-              OneFolder in order to prevent you from losing the tags you assigned to them when you
-              accidentially remove your images, or move them elsewhere. To confirm to OneFolder the
+              MetaTagger in order to prevent you from losing the tags you assigned to them when you
+              accidentially remove your images, or move them elsewhere. To confirm to MetaTagger the
               files were deleted intentionally, you can select those images in the "Missing images"
               view and pressing the delete button in the toolbar. Otherwise, you can simply place
-              the images back to their original path so that OneFolder will automatically detect
+              the images back to their original path so that MetaTagger will automatically detect
               them again.
               <br />
               You are free to rename your images, and to move them to a different folder, as long as
-              they remain within the same location. OneFolder will automatically detect those
+              they remain within the same location. MetaTagger will automatically detect those
               changes upon you restarting the application.
             </p>
             <p>
@@ -269,7 +269,7 @@ const PAGE_DATA: () => IPageData[] = () => [
               and browse the folder that contains images. Confirm your selection and select your
               location preferences in the following popup. You have the option to exclude subfolders
               during this process. Excluding subfolders later is also possible but keep in mind that
-              OneFolder does not store tag data for excluded folders. Any existing tag data will be
+              MetaTagger does not store tag data for excluded folders. Any existing tag data will be
               removed when you choose to exclude a subfolder. Once you confirm, your images will
               show up in the content area.
             </p>
@@ -302,7 +302,7 @@ const PAGE_DATA: () => IPageData[] = () => [
           <>
             <p>
               A browser extension for FireFox and Chromium-based browsers such as Google Chrome and
-              Edge is available. It allows you to import images into OneFolder directly from your
+              Edge is available. It allows you to import images into MetaTagger directly from your
               web browser and immediately tag them as well. Take a look in the "Background
               Processes" section in the settings window for more information. Get the extension here
               from <ExternalLink url={chromeExtensionUrl}>Chrome Webstore</ExternalLink> or for{' '}
@@ -316,7 +316,7 @@ const PAGE_DATA: () => IPageData[] = () => [
         content: (
           <>
             <p>
-              You can save the tags stored in OneFolder's internal database to the metadata of your
+              You can save the tags stored in MetaTagger's internal database to the metadata of your
               image files. This allows you to view them in other applications, such as your file
               browser and tools like Adobe Bridge. This option is available in the "Import/Export"
               section of the settings window. Importing tags from file metadata can be performed in
@@ -391,21 +391,21 @@ const PAGE_DATA: () => IPageData[] = () => [
         content: (
           <>
             <p>
-              In OneFolder there are several ways to find specific images. By default, the search
+              In MetaTagger there are several ways to find specific images. By default, the search
               bar lets you look for images based on their tags. You can press Ctrl-F to focus on the
               searchbar quickly. The advanced search can be accessed from the three dots icon in the
-              upper right corner of OneFolder.
+              upper right corner of MetaTagger.
             </p>
             <p>
               The searchbar that is always visible in the toolbar is the quickest way to search.
-              Once you start typing, OneFolder will make suggestions with an indication of any
+              Once you start typing, MetaTagger will make suggestions with an indication of any
               parent tags. Select the item from the list to add it to your search. You can narrow
               down an image by searching for several tags at once. If you search for two tags, by
-              default, OneFolder will return all images that have both tags assigned. You can change
-              this behavior with the two circles icon on the right side of the search bar to return
-              all images that have any of the two tags assigned instead. Finally keep in mind that
-              OneFolder will search for child tags recursivly by default. You can use the advanced
-              search to exclude child tags from the result.
+              default, MetaTagger will return all images that have both tags assigned. You can
+              change this behavior with the two circles icon on the right side of the search bar to
+              return all images that have any of the two tags assigned instead. Finally keep in mind
+              that MetaTagger will search for child tags recursivly by default. You can use the
+              advanced search to exclude child tags from the result.
             </p>
           </>
         ),
@@ -416,7 +416,7 @@ const PAGE_DATA: () => IPageData[] = () => [
           <>
             <p>
               The advanced search can be opened by pressing the three dots icon in the upper right
-              corner of OneFolder, or by using the Ctrl-Shift-F shortcut. In that window you are
+              corner of MetaTagger, or by using the Ctrl-Shift-F shortcut. In that window you are
               able to create as many search criteria as you wish by listing them up. Enter your
               criteria in the criteria builder section of the advanced search. Then use the plus
               icon on the right side to add the finished criteria to the query editor below.

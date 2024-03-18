@@ -38,7 +38,7 @@ const SecondaryCommands = observer(() => {
       <MenuItem
         icon={IconSet.THUMB_BG}
         onClick={() => {
-          shell.openExternal('https://onefolder.canny.io/feedback');
+          shell.openExternal('https://discord.gg/GdxuetuNkN'); // metatagger discord
         }}
         text="💡ideas + 🐞bugs"
       />
