@@ -102,7 +102,7 @@ const dbConfig: DBVersioningConfig[] = [
       {
         name: 'files',
         schema:
-          '++id, locationId, *tags, relativePath, &absolutePath, name, extension, size, width, height, dateAdded, dateModified, dateCreated, annotations',
+          '++id, ino, locationId, *tags, relativePath, &absolutePath, name, extension, size, width, height, dateAdded, dateModified, dateCreated, annotations',
       },
     ],
     upgrade: (tx: Transaction): void => {
