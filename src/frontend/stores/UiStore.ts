@@ -148,7 +148,7 @@ class UiStore {
   private readonly rootStore: RootStore;
 
   // Theme
-  @observable theme: 'light' | 'dark' = 'light';
+  @observable theme: 'light' | 'dark' = 'dark';
 
   // UI
   @observable isOutlinerOpen: boolean = true;
