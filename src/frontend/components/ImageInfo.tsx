@@ -39,6 +39,7 @@ const exifFields: Record<string, ExifField> = {
   },
   // ImageDescription: { label: 'Description', modifiable: true },
   Parameters: { label: 'Parameters' },
+  Prompt: { label: 'Prompt' },
   Copyright: { label: 'Copyright', modifiable: true },
   Make: { label: 'Camera Manufacturer' },
   Model: { label: 'Camera Model' },
