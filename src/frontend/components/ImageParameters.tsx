@@ -55,7 +55,7 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
       const data: Record<string, string> = {};
       data[descriptionKey] = descriptionValue;
 
-      // Xav: funciona para "Description" pero no para "Parameters"
+      // Antoine: funciona para "Description" pero no para "Parameters"
       console.log('data', data);
       exifTool
         .writeData(file.absolutePath, data)
@@ -77,49 +77,7 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
 
   return (
     <div className="inspector-section">
-      <textarea
-        name={descriptionKey}
-        onKeyDown={stopPropagation}
-        className="description-box"
-        rows={10}
-        value={descriptionValue}
-        onChange={(e) => setDescriptionValue(e.target.value)}
-      ></textarea>
-      <div
-        className={`inspector-section__action-buttons ${
-          descriptionOriginalValue === descriptionValue ? 'low-opacity' : ''
-        }`}
-      >
-        <button
-          onClick={() => setDescriptionValue(descriptionOriginalValue)}
-          disabled={descriptionOriginalValue === descriptionValue}
-        >
-          cancel
-        </button>
-        <button
-          className={`${descriptionOriginalValue !== descriptionValue ? 'highlight-save' : ''}`}
-          onClick={handleEditSubmit}
-          disabled={descriptionOriginalValue === descriptionValue}
-        >
-          save
-        </button>
-      </div>
-      {/* <Toolbar controls="file-info" isCompact>
-        <ToolbarButton
-          key="cancel"
-          icon={IconSet.CLOSE}
-          text="Cancel"
-          tooltip="Cancel changes"
-          type="reset"
-        />
-        <ToolbarButton
-          key="submit"
-          icon={IconSet.SELECT_CHECKED}
-          text="Save"
-          tooltip="Save changes"
-          type="submit"
-        />
-      </Toolbar> */}
+      <p className="parameters-box">{descriptionValue}</p>
     </div>
   );
 };

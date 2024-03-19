@@ -55,9 +55,6 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
       const data: Record<string, string> = {};
       data[descriptionKey] = descriptionValue;
 
-      // Xav: funciona para "Description" pero no para "Parameters"
-      console.log('data', data);
-
       exifTool
         .writeData(file.absolutePath, data)
         .then(() => {
