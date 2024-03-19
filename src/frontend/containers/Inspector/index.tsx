@@ -12,6 +12,7 @@ import ImageTools from '../../components/ImageTools';
 import ImageInfo from '../../components/ImageInfo';
 import { IconSet } from 'widgets';
 import { IS_PREVIEW_WINDOW } from 'common/window';
+import ImagePrompt from 'src/frontend/components/ImagePrompt';
 
 const Inspector = observer(() => {
   const { uiStore, fileStore } = useStore();
@@ -31,21 +32,13 @@ const Inspector = observer(() => {
       <br />
       <br />
 
-      <InspectorToggleSection
+      {/* <InspectorToggleSection
         title="Description"
         icon={IconSet.EDIT}
         isOpen={uiStore.inspectorIsDescriptionVisible}
         toggleVisibility={uiStore.toggleInspectorDescriptionVisibility}
         bodyComponent={<ImageDescription file={first} />}
-      />
-
-      <InspectorToggleSection
-        title="Parameters"
-        icon={IconSet.EDIT}
-        isOpen={uiStore.inspectorIsDescriptionVisible}
-        toggleVisibility={uiStore.toggleInspectorDescriptionVisibility}
-        bodyComponent={<ImageParameters file={first} />}
-      />
+      /> */}
 
       {/* Modifying state in preview window is not supported (not in sync updated in main window) */}
       {!IS_PREVIEW_WINDOW && (
@@ -57,6 +50,22 @@ const Inspector = observer(() => {
           bodyComponent={<FileTags file={first} />}
         />
       )}
+
+      <InspectorToggleSection
+        title="Parameters"
+        icon={IconSet.TREE_LIST}
+        isOpen={uiStore.inspectorIsParametersVisible}
+        toggleVisibility={uiStore.toggleInspectorParametersVisibility}
+        bodyComponent={<ImageParameters file={first} />}
+      />
+
+      <InspectorToggleSection
+        title="Prompt"
+        icon={IconSet.TREE_LIST}
+        isOpen={uiStore.inspectorIsPromptVisible}
+        toggleVisibility={uiStore.toggleInspectorPromptVisibility}
+        bodyComponent={<ImagePrompt file={first} />}
+      />
 
       {/* <InspectorToggleSection
         title="Dates"

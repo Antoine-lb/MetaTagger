@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { IconSet } from 'widgets/icons';
-import { Toolbar, ToolbarButton } from 'widgets/toolbar';
 import { RendererMessenger } from '../../ipc/renderer';
 import { useStore } from '../contexts/StoreContext';
 import { ClientFile } from '../entities/File';
 import { AppToaster } from './Toaster';
+import ReactJson from 'react-json-view';
 
 // type ExifField = { label: string; modifiable?: boolean; format?: (val: string) => ReactNode };
 
@@ -16,25 +15,20 @@ import { AppToaster } from './Toaster';
 
 // const exifTags = Object.keys(exifFields);
 
-const stopPropagation = (e: React.KeyboardEvent<HTMLTextAreaElement>) => e.stopPropagation();
-
 interface ImageInfoProps {
   file: ClientFile;
 }
 
 const ImageInfo = ({ file }: ImageInfoProps) => {
-  const descriptionKey = 'Parameters';
   const { exifTool } = useStore();
 
-  const [descriptionValue, setDescriptionValue] = useState('no parameters');
-  const [descriptionOriginalValue, setDescriptionOriginalValue] = useState('');
+  const [descriptionValue, setDescriptionValue] = useState('');
 
   useEffect(() => {
     exifTool
-      .readParameters(file.absolutePath)
+      .readPrompt(file.absolutePath)
       .then((description) => {
-        setDescriptionValue(description || 'no parameters');
-        setDescriptionOriginalValue(description || 'no parameters');
+        setDescriptionValue(description || '');
       })
       .catch((err) => {
         AppToaster.show({
@@ -48,9 +42,25 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [file.absolutePath]);
 
+  let descriptionObj;
+  try {
+    descriptionObj = JSON.parse(descriptionValue);
+  } catch (error) {
+    descriptionObj = {};
+  }
+
   return (
     <div className="inspector-section">
-      <p className="parameters-box">{descriptionValue}</p>
+      <div className="prompt-box">
+        <ReactJson
+          src={descriptionObj}
+          enableClipboard={false}
+          displayDataTypes={false}
+          displayObjectSize={false}
+          indentWidth={2}
+          theme="twilight"
+        />
+      </div>
     </div>
   );
 };
