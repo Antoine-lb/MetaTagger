@@ -53,15 +53,15 @@ const Inspector = observer(() => {
 
       <InspectorToggleSection
         title="Parameters"
-        icon={IconSet.TREE_LIST}
+        icon={IconSet.TEXT_HIGHLIGHT}
         isOpen={uiStore.inspectorIsParametersVisible}
         toggleVisibility={uiStore.toggleInspectorParametersVisibility}
         bodyComponent={<ImageParameters file={first} />}
       />
 
       <InspectorToggleSection
-        title="Prompt"
-        icon={IconSet.TREE_LIST}
+        title="ComfyUI Layout"
+        icon={IconSet.MANY_TO_MANY}
         isOpen={uiStore.inspectorIsPromptVisible}
         toggleVisibility={uiStore.toggleInspectorPromptVisibility}
         bodyComponent={<ImagePrompt file={first} />}

@@ -66,6 +66,7 @@ import ITEM_MOVE_DOWN from 'resources/icons/item-move-down.svg';
 import ITEM_MOVE_UP from 'resources/icons/item-move-up.svg';
 import LOADING from 'resources/icons/loading.svg';
 import LOGO from 'resources/logo/svg/white/onefolder-logomark-white.svg';
+import MANY_TO_MANY from 'resources/icons/many-to-one.svg';
 import MEDIA from 'resources/icons/media.svg';
 import MENU_HAMBURGER from 'resources/icons/menu-hamburger.svg';
 import META_INFO from 'resources/icons/meta-info.svg';
@@ -106,6 +107,7 @@ import TAG_BLANCO from 'resources/icons/tag-blanco.svg';
 import TAG_GROUP from 'resources/icons/tag-group.svg';
 import TAG from 'resources/icons/tag.svg';
 import TAG_LINE from 'resources/icons/tag-line.svg';
+import TEXT_HIGHLIGHT from 'resources/icons/text-highlight.svg';
 import THUMB_SM from 'resources/icons/thumb-sm.svg';
 import THUMB_MD from 'resources/icons/thumb-md.svg';
 import THUMB_BG from 'resources/icons/thumb-bg.svg';
@@ -180,6 +182,7 @@ const IconSet = {
   // OUTLINER: toSvg(OUTLINER),
   LOADING: toSvg(LOADING),
   LOGO: toSvg(LOGO),
+  MANY_TO_MANY: toSvg(MANY_TO_MANY),
   // LOGO_MARK_BLACK: toSvg(LOGOMARK_BLACK),
   // LOGO_MARK_WHITE: toSvg(LOGOMARK_WHITE),
   MEDIA: toSvg(MEDIA),
@@ -222,6 +225,7 @@ const IconSet = {
   TAG_GROUP: toSvg(TAG_GROUP),
   TAG: toSvg(TAG),
   TAG_LINE: toSvg(TAG_LINE),
+  TEXT_HIGHLIGHT: toSvg(TEXT_HIGHLIGHT),
   THUMB_SM: toSvg(THUMB_SM),
   THUMB_MD: toSvg(THUMB_MD),
   THUMB_BG: toSvg(THUMB_BG),
