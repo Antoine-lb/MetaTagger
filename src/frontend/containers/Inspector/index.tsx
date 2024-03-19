@@ -4,6 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { useStore } from '../../contexts/StoreContext';
 import FileTags from '../../components/FileTag';
 import ImageDescription from '../../components/ImageDescription';
+import ImageParameters from '../../components/ImageParameters';
 import ImageDates from '../../components/ImageDates';
 import ImageMap from '../../components/ImageMap';
 import ImageDuplicates from '../../components/ImageDuplicates';
@@ -38,6 +39,14 @@ const Inspector = observer(() => {
         bodyComponent={<ImageDescription file={first} />}
       />
 
+      <InspectorToggleSection
+        title="Parameters"
+        icon={IconSet.EDIT}
+        isOpen={uiStore.inspectorIsDescriptionVisible}
+        toggleVisibility={uiStore.toggleInspectorDescriptionVisibility}
+        bodyComponent={<ImageParameters file={first} />}
+      />
+
       {/* Modifying state in preview window is not supported (not in sync updated in main window) */}
       {!IS_PREVIEW_WINDOW && (
         <InspectorToggleSection
@@ -49,15 +58,15 @@ const Inspector = observer(() => {
         />
       )}
 
-      <InspectorToggleSection
+      {/* <InspectorToggleSection
         title="Dates"
         icon={IconSet.FILTER_DATE}
         isOpen={uiStore.inspectorIsDatesVisible}
         toggleVisibility={uiStore.toggleInspectorDatesVisibility}
         bodyComponent={<ImageDates file={first} />}
-      />
+      /> */}
 
-      <InspectorToggleSection
+      {/* <InspectorToggleSection
         title="Map"
         icon={IconSet.WORLD}
         isOpen={uiStore.inspectorIsMapVisible}
@@ -79,7 +88,7 @@ const Inspector = observer(() => {
         isOpen={uiStore.inspectorIsToolsVisible}
         toggleVisibility={uiStore.toggleInspectorToolsVisibility}
         bodyComponent={<ImageTools file={first} />}
-      />
+      /> */}
 
       <InspectorToggleSection
         title="Other"

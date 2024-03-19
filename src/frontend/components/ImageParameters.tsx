@@ -23,7 +23,7 @@ interface ImageInfoProps {
 }
 
 const ImageInfo = ({ file }: ImageInfoProps) => {
-  const descriptionKey = 'Description';
+  const descriptionKey = 'Parameters';
   const { exifTool } = useStore();
 
   const [descriptionValue, setDescriptionValue] = useState('');
@@ -31,7 +31,7 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
 
   useEffect(() => {
     exifTool
-      .readDescription(file.absolutePath)
+      .readParameters(file.absolutePath)
       .then((description) => {
         setDescriptionValue(description || '');
         setDescriptionOriginalValue(description || '');
@@ -57,20 +57,19 @@ const ImageInfo = ({ file }: ImageInfoProps) => {
 
       // Xav: funciona para "Description" pero no para "Parameters"
       console.log('data', data);
-
       exifTool
         .writeData(file.absolutePath, data)
         .then(() => {
-          AppToaster.show({ message: 'Image description updated', timeout: 3000 });
+          AppToaster.show({ message: 'Image Parameters updated', timeout: 3000 });
           setDescriptionOriginalValue(descriptionValue);
         })
         .catch((err) => {
           AppToaster.show({
-            message: 'Could not updated image description',
+            message: 'Could not updated image Parameters',
             clickAction: { label: 'View', onClick: RendererMessenger.toggleDevTools },
             timeout: 6000,
           });
-          console.error('Could not update image description', err);
+          console.error('Could not update image Parameters', err);
         });
     },
     [descriptionValue, exifTool, file.absolutePath],
