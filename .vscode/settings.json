@@ -8,7 +8,6 @@
     "resources/exiftool/lib/**/*": true
   },
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "cSpell.words": [
-    "outliner"
-  ]
+  "cSpell.words": ["outliner"],
+  "workbench.colorTheme": "Bearded Theme Vivid Purple"
 }
