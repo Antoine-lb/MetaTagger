@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*{ts,tsx} widgets/**/*{ts,tsx} --fix",
     "test": "jest",
     "package": "yarn build && electron-builder",
-    "logo": "ncp ./resources/logo/icns/metatagger-logomark-fc.icns ./build/icon.icns && ncp ./resources/logo/ico/onefolder-logomark-fc-256x256.ico ./build/icon.ico",
+    "logo": "ncp ./resources/logo/icns/metatagger-logomark-fc.icns ./build/icon.icns && ncp ./resources/logo/ico/metatagger-logomark-fc-256x256.ico ./build/icon.ico",
     "build": "rimraf dist && yarn production && yarn logo",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
@@ -19,8 +19,8 @@
     "build:exr": "cd wasm/wasm-build && cargo run exr-decoder exr"
   },
   "build": {
-    "appId": "com.onefolder-app.onefolder",
-    "productName": "OneFolder",
+    "appId": "com.metatagger-app.metatagger",
+    "productName": "MetaTagger",
     "afterSign": "scripts/notarize.js",
     "mac": {
       "hardenedRuntime": true,
